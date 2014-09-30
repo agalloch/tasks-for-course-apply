@@ -30,7 +30,7 @@ module Trigonometry
       power = 2*k + 1
       denominator = cache[power]
 
-      sum += kth_member(x, k, power, denominator)
+      sum += kth_term(x, k, power, denominator)
     end
 
     sum
@@ -47,7 +47,7 @@ module Trigonometry
       power = 2*k
       denominator = cache[power]
 
-      sum += kth_member(x, k, power, denominator)
+      sum += kth_term(x, k, power, denominator)
     end
 
     sum
@@ -55,7 +55,7 @@ module Trigonometry
 
   private
 
-  def kth_member(x, k, power, denominator)
+  def kth_term(x, k, power, denominator)
     ((-1)**k * x**power) / denominator
   end
 end
